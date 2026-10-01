@@ -1,4 +1,4 @@
-import { Gasto } from "./gasto.model.js"
+import { GastoCombustible } from "./gasto.model.js"
 
 const jsonHistorico = `
 [
@@ -31,7 +31,7 @@ const jsonHistorico = `
 const datosParseados = JSON.parse(jsonHistorico)
 
 function convertirObjetos(gasto) {
-    return gasto = new Gasto(
+    return gasto = new GastoCombustible(
         gasto.id,
         gasto.vehicleType,
         gasto.date,
