@@ -1,6 +1,6 @@
 'use strict'
 
-export class Gasto {
+export class GastoCombustible {
     
     constructor(id, vehicleType, date, kilometers, precioViaje) {
         this.id = parseInt(id)
