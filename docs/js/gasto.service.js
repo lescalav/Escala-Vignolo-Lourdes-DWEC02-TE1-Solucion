@@ -1,4 +1,5 @@
 import { GASTOS_DB } from "./gasto.data.js";
+import { GastoCombustible } from "./gasto.model.js";
 
 var gastoAnual = {
   2020: 0,
@@ -33,6 +34,7 @@ export const GastoService = {
   */
   procesarGasto(jsonNuevoGasto) {
     const datoParseado = JSON.parse(jsonNuevoGasto)
+    // Crear un objeto de tipo GastoCombustible
     const obtenerAnio = new Date(datoParseado.date).getFullYear()
     gastoAnual[obtenerAnio] += datoParseado.kilometers * datoParseado.precioViaje
     sessionStorage.setItem(obtenerAnio, gastoAnual[obtenerAnio].toFixed(2))
